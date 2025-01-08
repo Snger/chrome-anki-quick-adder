@@ -349,11 +349,13 @@ document.addEventListener('DOMContentLoaded', restore_options);
 function isUpdatedNow(openUrl = 0) {
     createContextMenu();
     if (openUrl === 1) {
+    /* 
         chrome.tabs.create({
-            url: "https://codehealthy.com/chrome-anki-quick-adder/#latest-update"
+            url: ""
         }, function (tab) {
             debugLog("update tab launched");
         });
+    */ 
     }
 
 }
@@ -368,11 +370,13 @@ function isInstalledNow() {
     }, 2000);
 
 
+    /* 
     chrome.tabs.create({
         url: "https://codehealthy.com/chrome-anki-quick-adder/#getting-started"
     }, function (tab) {
         debugLog("install tab launched");
     });
+    */
 }
 
 chrome.extension.onConnect.addListener(function (port) {
